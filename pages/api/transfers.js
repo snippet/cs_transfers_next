@@ -2,6 +2,7 @@
 const HttpsAgent = require('https').Agent;
 const cheerio = require('cheerio');
 const { gotScraping } = require('got-scraping');
+const { readLogsFromDatabase, writeLogToDatabase, isDuplicateLog } = require('../../app/utils/database.js');
 
 export default async function handler(req, res) {
 
